@@ -1,0 +1,7 @@
+{% extends 'main/base.html' %}
+{% load static %}
+        {% if user.is_authenticated %}
+{% block osnova %}
+    <p>Choose your level</p>
+{% endblock %}
+     {% endif %}

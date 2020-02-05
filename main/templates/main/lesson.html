@@ -1,0 +1,9 @@
+{% extends 'main/base.html' %}
+{% load static %}
+
+{% block osnova %}
+    <h1>{{lsn.course.title}}</h1>
+    <h2>{{lsn.name}}</h2>
+		<h3>{{lsn.description}}</h3>
+		<p class="text">{{lsn.content}}</p>
+{% endblock %}

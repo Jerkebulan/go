@@ -1,0 +1,76 @@
+{% load crispy_forms_tags %}
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        body {
+    background-repeat: no-repeat    ;
+    background-size: 100%;
+background-image: url("https://ak8.picdn.net/shutterstock/videos/1032769898/thumb/1.jpg");}
+.reg {text-align: center   ;
+font-weight: 900;
+font-size: 0.7cm;
+padding: 30px 0 0 0;
+font-family: 'Raleway', sans-serif;
+
+color: black;}
+
+hr{border: 2px solid blueviolet; }
+
+
+.container {
+    background-color: white;
+
+    width: 350px;
+    height: 500px;
+    border-radius: 25px;
+    margin: 0 auto;
+    margin-top: 120px;
+    border-bottom: 1px solid #CCC;
+}
+.content{font-size: 0.7cm;
+
+font-family: 'Raleway', sans-serif;
+
+color: black;}
+    </style>
+    <title>Тіркелу</title>
+    <!--<link rel="stylesheet" href="regpage.css">-->
+    <link href="https://fonts.googleapis.com/css?family=Raleway&display=swap" rel="stylesheet">
+</head>
+<body>
+{% if user.is_authenticated %}
+<p>You are already registered, wanna log out?</p>
+{% else %}
+
+
+
+    <div class="container">
+        <form method="POST" class="form-group">
+                    <p class="reg">
+            Registration form
+        </p>
+
+
+
+
+            {% csrf_token %}
+            {{ form|crispy }}
+            <button type="submit" class="btn btn-success">Оқуды бастау</button>
+
+        </form>
+    </div>
+{% endif %}
+
+
+</body>
+
+
+
+
+
+
+
+
+
+</html>

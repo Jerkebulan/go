@@ -1,0 +1,49 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="{% static 'main/home.css'%}">
+    <link href="https://fonts.googleapis.com/css?family=Raleway&display=swap" rel="stylesheet">
+    <title>Home</title>
+</head>
+<body>
+
+
+
+
+    <div class="topnav">
+        <a href="{% url 'welcome' %}" id="home">Басты бет</a>
+        <a class="active" href="{% url 'register' %}">Тіркелу</a>
+        <a href="{% url 'login' %}">Жүйеге кіру</a>
+        
+    </div>
+
+<!--   <div  class="sidebar">
+    <header class="level">Levels</header>
+    <ul>
+        <a href="bh.html"><li>Beginner</li></a>
+        <a href=""><li>Elementary</li></a>
+        <a href=""><li>Intermediate</li></a>
+        <a href=""><li>Advanced</li></a>
+
+    </ul>
+</div> -->
+
+
+
+
+<div class="content">
+    <header class="welcome">Welcome </header>  <br>
+    <br>
+ 
+    <br>
+    <br>
+    <div><p class="learn">Learn English and improve your language skills using our online learning platform </p> </div>
+    <br>
+    <br>
+    <p class="how">How to use?</p>
+    <p class="ans">-Select your language level and learn new words or practice reading skills </p>
+
+</div>
+</body>
+</html>

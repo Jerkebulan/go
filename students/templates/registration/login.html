@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+{% extends "main/base.html" %}
+
+{% load crispy_forms_tags %}
+{% block kiru %}
+{% endblock %}
+{% block osnova %}
+        {% if user.is_authenticated %}
+<br>
+    <p>You are already logged in</p>
+    {% else %}
+<br>
+<br>
+<div>
+    <form method="POST" class="form-group">
+        {% csrf_token %}
+        {{ form|crispy }}
+        <p>Don't have an account? <a href="{% url 'register' %}">CREATE ACCOUNT</a></p>
+        <button type="submit" class="btn btn-success">Login</button>
+    </form>
+</div>
+{% endif %}
+{% endblock %}

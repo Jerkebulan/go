@@ -1,0 +1,12 @@
+{% extends 'main/base.html' %}
+{% load static %}
+        {% if user.is_authenticated %}
+{% block osnova %}
+    <h1>{{ crs.title }}</h1>
+    {% for lesson in list_lessons %}
+        <h3><a href="{% url 'lesson' pk=lesson.pk %}">{{ lesson.name }}</h3>
+    {% endfor %}
+{% endblock %}
+{% else %}
+
+{% endif %}
